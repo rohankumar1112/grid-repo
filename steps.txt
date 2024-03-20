@@ -1,0 +1,63 @@
+cd conpot
+sudo mv setup.py requirements.txt README.md /home/rio/Desktop/grid-repo/gridpot/conpot  (move and replace)
+cd ../gridpot/conpot/
+sudo python3 setup.py install
+sudo chown -R $USER:$USER /usr/local/lib/python3.10
+cd ../../Conpot-distribution/
+sudo rm -r /usr/local/lib/python3.10/dist-packages/conpot-0.4.0-py3.10.egg/
+sudo mv -f  conpot-0.4.0-py3.10.egg/  /usr/local/lib/python3.10/dist-packages/
+
+
+pip install pymysql
+pip install hpfeeds
+pip install charset-normalizer
+pip install bottle
+pip install beautifulsoup4
+
+sudo rm -r /usr/local/lib/python3.10/dist-packages/modbus_tk-1.1.3-py3.10.egg/modbus_tk/modbus.py
+sudo mv -f modbus.py /usr/local/lib/python3.10/dist-packages/modbus_tk-1.1.3-py3.10.egg/modbus_tk/
+
+#before
+
+alabaster                   imagesize.py                 __pycache__                              sphinxcontrib_htmlhelp-2.0.5.dist-info
+alabaster-0.7.16.dist-info  jinja2                       pycryptodomex-3.20.0.dist-info           sphinxcontrib_jsmath-1.0.1.dist-info
+babel                       Jinja2-3.1.3.dist-info       pygments                                 sphinxcontrib_jsmath-1.0.1-py3.7-nspkg.pth
+Babel-2.14.0.dist-info      lxml                         pygments-2.17.2.dist-info                sphinxcontrib_qthelp-1.0.7.dist-info
+Cryptodome                  lxml-5.1.0.dist-info         pysmi                                    sphinxcontrib_serializinghtml-1.1.10.dist-info
+cybox                       mixbox                       pysmi-0.3.4.dist-info                    stix
+cybox-2.1.0.21.dist-info    mixbox-1.0.5.dist-info       pysnmp                                   stix-1.2.0.11.dist-info
+docutils                    ordered_set                  pysnmp-4.4.12.dist-info                  weakrefmethod
+docutils-0.20.1.dist-info   ordered_set-4.1.0.dist-info  snowballstemmer                          weakrefmethod-1.0.3.dist-info
+gevent                      packaging                    snowballstemmer-2.2.0.dist-info          zope
+gevent-24.2.1.dist-info     packaging-24.0.dist-info     sphinx                                   zope.event-5.0.dist-info
+greenlet                    ply                          sphinx-7.2.6.dist-info                   zope.event-5.0-py3.11-nspkg.pth
+greenlet-3.0.3.dist-info    ply-3.11.dist-info           sphinxcontrib                            zope.interface-6.2.dist-info
+imagesize                   pyasn1                       sphinxcontrib_applehelp-1.0.8.dist-info  zope.interface-6.2-py3.10-nspkg.pth
+imagesize-1.4.1.dist-info   pyasn1-0.5.1.dist-info       sphinxcontrib_devhelp-1.0.6.dist-info
+
+
+#after
+
+labaster                            hpfeeds3-0.9.10-py3.10.egg            pyasn1                                   sphinxcontrib_devhelp-1.0.6.dist-info
+alabaster-0.7.16.dist-info           imagesize                             pyasn1-0.5.1.dist-info                   sphinxcontrib_htmlhelp-2.0.5.dist-info
+appdirs-1.4.4-py3.10.egg             imagesize-1.4.1.dist-info             __pycache__                              sphinxcontrib_jquery-4.1-py3.10.egg
+babel                                imagesize.py                          pycryptodomex-3.20.0.dist-info           sphinxcontrib_jsmath-1.0.1.dist-info
+Babel-2.14.0.dist-info               iniconfig-2.0.0-py3.10.egg            pyghmi-1.4.1-py3.10.egg                  sphinxcontrib_jsmath-1.0.1-py3.7-nspkg.pth
+bacpypes-0.17.0-py3.10.egg           jinja2                                pygments                                 sphinxcontrib_qthelp-1.0.7.dist-info
+conpot-0.4.0-py3.10.egg              Jinja2-3.1.3.dist-info                pygments-2.17.2.dist-info                sphinxcontrib_serializinghtml-1.1.10.dist-info
+cpppo-4.4.2-py3.10.egg               libtaxii-1.1.119-py3.10.egg           pyserial-3.5-py3.10.egg                  sphinx_rtd_theme-2.0.0-py3.10.egg
+crc16-0.1.1-py3.10-linux-x86_64.egg  lxml                                  pysmi                                    stix
+Cryptodome                           lxml-5.1.0.dist-info                  pysmi-0.3.4.dist-info                    stix-1.2.0.11.dist-info
+cybox                                mixbox                                pysnmp                                   stix_validator-3.0.0-py3.10.egg
+cybox-2.1.0.21.dist-info             mixbox-1.0.5.dist-info                pysnmp-4.4.12.dist-info                  text_unidecode-1.3-py3.10.egg
+docutils                             modbus_tk-1.1.3-py3.10.egg            pysnmp_mibs-0.1.6-py3.10.egg             tftpy-0.8.2-py3.10.egg
+docutils-0.20.1.dist-info            natsort-8.4.0-py3.10.egg              pytest-8.1.1-py3.10.egg                  tomli-2.0.1-py3.10.egg
+easy-install.pth                     ordereddict-1.1-py3.10.egg            python_slugify-8.0.4-py3.10.egg          weakrefmethod
+exceptiongroup-1.2.0-py3.10.egg      ordered_set                           scapy-2.5.0-py3.10.egg                   weakrefmethod-1.0.3.dist-info
+freezegun-1.4.0-py3.10.egg           ordered_set-4.1.0.dist-info           setuptools.pth                           xlrd-2.0.1-py3.10.egg
+fs-2.3.0-py3.10.egg                  packaging                             snowballstemmer                          zope
+gevent                               packaging-24.0.dist-info              snowballstemmer-2.2.0.dist-info          zope.event-5.0.dist-info
+gevent-24.2.1.dist-info              pluggy-1.4.0-py3.10.egg               sphinx                                   zope.event-5.0-py3.11-nspkg.pth
+greenery-2.1-py3.10.egg              ply                                   sphinx-7.2.6.dist-info                   zope.interface-6.2.dist-info
+greenlet                             ply-3.11.dist-info                    sphinxcontrib                            zope.interface-6.2-py3.10-nspkg.pth
+greenlet-3.0.3.dist-info             psutil-5.9.8-py3.10-linux-x86_64.egg  sphinxcontrib_applehelp-1.0.8.dist-info
